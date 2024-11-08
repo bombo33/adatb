@@ -20,9 +20,9 @@ WHERE kiszállítási_idő IS NULL
 DELETE FROM ügyfél
 WHERE státusz = 'Inaktív';
 
--- 6. Adatok beszúrása egy kapcsolótáblába két EH-táblából származó adat alapján. Felvesszük azokat a tanulókat a kapcsolótáblába, akik 10. évfolyamba járnak és matematika kurzusra jelentkeztek.
+-- 6. Adatok beszúrása egy kapcsolótáblába két EH-táblából származó adat alapján.
 INSERT INTO rendelés (ügyfél_azonosító, áru_azonosító, dátum)
-(SELECT u.ügyfél_azonosító, á.áru_azonosító, '2024-11-08'
+(SELECT u.ügyfél_azonosító, a.áru_azonosító, '2024-11-08'
   FROM ügyfél u, áru a
-  WHERE ü.név = 'Kiss Péter'
+  WHERE u.név = 'Kiss Péter'
   AND a.áru_azonosító = '12345');
