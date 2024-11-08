@@ -1,5 +1,5 @@
 -- 1. Új rekord hozzáadása a táblához
-INSERT INTO ügyfél (név, város) 
+INSERT INTO ügyfél (név, város) -- mesterséges kulcs NE
 VALUES ('Kiss Péter', 'Budapest');
 
 -- 2-3. Egy rekord módosítása a megadott táblában, meghatározott üzleti kulcs alapján
